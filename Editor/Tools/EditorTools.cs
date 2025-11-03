@@ -38,8 +38,7 @@ namespace NBC.ActionEditor
             if (GUILayout.Button(Lan.Select, GUILayout.Width(40)))
             {
                 var select_path =
-                    EditorUtility.OpenFilePanel(Lan.SelectFile,
-                        "Assets/", "");
+                    EditorUtility.OpenFilePanel(Lan.SelectFile, PrefsConst.ConfigFolderPath, "");
                 if (string.IsNullOrEmpty(select_path)) return str;
                 int asset_start_index = select_path.IndexOf("Assets", StringComparison.Ordinal);
                 if (asset_start_index > -1)
@@ -64,8 +63,7 @@ namespace NBC.ActionEditor
             if (GUILayout.Button(Lan.Select, GUILayout.Width(40)))
             {
                 var select_path =
-                    EditorUtility.OpenFolderPanel(Lan.SelectFolder,
-                        "Assets/", "");
+                    EditorUtility.OpenFolderPanel(Lan.SelectFolder, PrefsConst.ConfigFolderPath, "");
                 if (string.IsNullOrEmpty(select_path)) return str;
                 int asset_start_index = select_path.IndexOf("Assets", StringComparison.Ordinal);
                 if (asset_start_index > -1)

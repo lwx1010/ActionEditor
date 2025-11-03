@@ -3,5 +3,7 @@
     public class PrefsConst
     {
         public const string Width = "NBSkillWidth";
+
+        public const string ConfigFolderPath = "Assets/";
     }
 }
